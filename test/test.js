@@ -1,0 +1,97 @@
+var Validator = require('../validate');
+
+var data0 = {
+    user: "ricky",
+    age: 17,
+    vip: false,
+    optional_field0: 'option0',
+    optional_field1: 'not_a_email'
+};
+
+var data1 = {
+    user: "rickylonglonglonglonglonglonglonglonglonglong",
+    age: 25,
+    phone: "18888888880",
+    vip: true,
+    optional_field1: 'ricky.tan.xin@gmail.com'
+};
+
+var model0 = {
+    user: 'string:5,20',
+    phone: 'string?:1\\d{10}',
+    age: 'number:[10,18)',
+    vip: 'bool',
+    optional_field0: 'string?',
+    optional_field1: 'email?'
+};
+
+var valid0 = new Validator(model0);
+
+console.log(valid0.validate(data0));
+console.log(valid0.validate(data1));
+
+var data2 = {
+    user: {
+        username: 'Ricky',
+        age: 25,
+        avatar: 'http://www.google.com/doodle.png',
+        slogan: "Talk is cheap, show me your code!"
+    },
+    comments: [{
+            comment_id: '2323',
+            content: 'yes, i have',
+            vote: '32'
+        }, {
+            comment_id: 2324,
+            content: 'yes, i have',
+            vote: 32
+        }]
+};
+
+var model1 = {
+    user: 'User',
+    comments: 'array:Comment'
+};
+
+Validator.define('Comment', {
+    comment_id: 'string',
+    content: 'string',
+    vote: 'number:[0,)'
+});
+
+Validator.define('User', {
+    username: 'string',
+    avatar: 'url',
+    age: 'number',
+    slogan: 'string?'
+});
+
+var valid1 = new Validator(model1);
+
+console.log(valid1.validate(data2));
+
+
+var data3 = {
+    post_id: 'abcde',
+    created_at: '2015-08-27T16:10:00.000Z',
+    updated_at: 'wefaw',
+    author: {
+        user: 'Ricky',
+        avatar: 'http://www.google.com/doodle.png'
+    }
+};
+
+var model2 = {
+    post_id: 'string',
+    created_at: 'date',
+    updated_at: 'date',
+    author: {
+        user: 'string',
+        avatar: 'url',
+        age: 'number'
+    }
+};
+
+var valid2 = new Validator(model2);
+
+console.log(valid2.validate(data3));
