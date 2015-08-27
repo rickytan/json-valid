@@ -9,7 +9,7 @@ There are some alternatives to this kind of scenario:
 - [validator.js](https://github.com/chriso/validator.js)
 - [jsonschema](https://github.com/tdegrunt/jsonschema)
 
-but so as easy as I expected, so here comes this Repo.
+but not as easy as I expected, so here comes this Repo.
 
 ## Install
 
