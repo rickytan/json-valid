@@ -1,5 +1,5 @@
 {
-  "name": "json-validate",
+  "name": "json-validator",
   "version": "0.0.1",
   "description": "A json model validate kit for NodeJS",
   "main": "validate.js",
@@ -19,7 +19,16 @@
     "debug": "^2.2.0",
     "underscore": "^1.8.3"
   },
-  "devDependencies": {
-    "debug": "^2.2.0"
-  }
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rickytan/json-validator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rickytan/json-validator/issues"
+  },
+  "homepage": "https://github.com/rickytan/json-validator"
 }

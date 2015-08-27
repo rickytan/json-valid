@@ -3,20 +3,23 @@ var _ = require('underscore')
         , error_code = require('../error');
 
 function validator(param) {
-    this.minValue = Number.MIN_VALUE;
+    this.minValue = -Number.MAX_VALUE;
     this.minInclude = false;
 
     this.maxValue = Number.MAX_VALUE;
     this.maxInclude = false;
 
-    var reg = /([\[\(]?)((\d*\.\d+)|(\d+)),((\d*\.\d+)|(\d+))([\]\)]?)/g;
+    var reg = /([\[\(]?)((\d*\.\d+)|(\d+))?,((\d*\.\d+)|(\d+))?([\]\)]?)/g;
     var match;
     while (match = reg.exec(param)) {
+        debug(match);
         if (match[1] === '[') {
             this.minInclude = true;
         }
-        this.minValue = +match[2];
-        this.maxValue = +match[5];
+        if (match[2])
+            this.minValue = +match[2];
+        if (match[5])
+            this.maxValue = +match[5];
         if (match[8] === ']') {
             this.maxInclude = true;
         }

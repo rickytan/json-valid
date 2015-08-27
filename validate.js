@@ -40,7 +40,7 @@ function validate(data, model, path) {
                 } catch (e) {   // otherwise use use defined models
                     var model = validator.model(type);
                     if (model) {
-                        validate.call(this, data[k], model);
+                        validate.call(this, data[k], model, path.concat([k]));
                     } else {
                         throw new Error("Undefined model " + type);
                     }
