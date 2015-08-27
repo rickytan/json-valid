@@ -14,7 +14,7 @@ but so as easy as I expected, so here comes this Repo.
 ## Install
 
 ``` cmd
-npm install json-validator
+npm install json-valid
 ```
 
 ## Usage
@@ -106,4 +106,3 @@ And here is the output from above:
 ## License
 
 **MIT**
-

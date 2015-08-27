@@ -1,5 +1,5 @@
 {
-  "name": "json-validator",
+  "name": "json-valid",
   "version": "0.0.1",
   "description": "A json model validate kit for NodeJS",
   "main": "validate.js",
