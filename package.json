@@ -16,6 +16,7 @@
   "author": "Ricky Tan <ricky.tan.xin@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "debug": "^2.2.0",
     "underscore": "^1.8.3"
   },
   "devDependencies": {
