@@ -20,7 +20,7 @@ npm install json-valid
 ## Usage
 
 ``` javascript
-var Validator = require('json-validator');
+var Validator = require('json-valid');
 ```
 
 ### Define a model
