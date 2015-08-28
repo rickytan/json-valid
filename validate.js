@@ -15,7 +15,7 @@ function validate(data, model, path) {
     path = path || [];
     debug("Data:", data);
     debug("Model:", model);
-    debug("Path: ", path)
+    debug("Path: ", path);
     _.each(model, function (v, k) {
         if (_.isObject(v)) {
             validate.call(this, data[k], v, path.concat([k]));
@@ -37,7 +37,7 @@ function validate(data, model, path) {
                     if (!_.isEmpty(error)) {
                         this.errors.push(error);
                     }
-                } catch (e) {   // otherwise use use defined models
+                } catch (e) {   // otherwise use user defined models
                     var model = validator.model(type);
                     if (model) {
                         validate.call(this, data[k], model, path.concat([k]));
