@@ -103,6 +103,20 @@ And here is the output from above:
   { [Error: Data field comments.0.author.is_vip doesn't exist] code: 1002, dataField: 'comments.0.author.is_vip' } ]
 ```
 
+### Supported Types
+
+- `string`: you can limit the length with ` 'field': 'string:6,20' ` (A common password length limit), or provide your own **RegExp** with ` 'field': 'string:a\\d+' ` (Need escape! This is equal to /a\d+/g)
+- `number`: you can limit the min and max value with ` 'field': 'number:[10,20)' ` (A square bracket means include, and parentheses mean exclude, just like what you do in Math)
+- `bool`
+- `url`
+- `date`: Any valid date string is supported
+- `email`
+- `array`: you can sepecify the element type of array with ` 'array-field': 'array:YourType' `, and **define** your type with `Validator.define('YourType', model)`, can be nested! If element type not provided, any array will pass the test.
+
+### Add your own type
+
+Fork this **Repo**, and add your type into `validators` directory.
+
 ## License
 
 **MIT**
