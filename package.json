@@ -1,34 +1,33 @@
 {
-  "name": "json-valid",
-  "version": "0.0.1",
-  "description": "A json model validate kit for NodeJS",
-  "main": "validate.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "name" : "json-valid",
+  "version" : "0.0.2",
+  "description" : "A json model validate kit for NodeJS",
+  "main" : "./validate.js",
+  "scripts" : {
+    "test" : "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "NodeJS",
-    "JSON",
-    "Data",
-    "Model",
-    "Validate"
-  ],
-  "author": "Ricky Tan <ricky.tan.xin@gmail.com>",
-  "license": "MIT",
-  "dependencies": {
-    "debug": "^2.2.0",
-    "underscore": "^1.8.3"
+  "keywords" : [ "NodeJS", "JSON", "Data", "Model", "Validate" ],
+  "author" : {
+    "name" : "Ricky Tan",
+    "email" : "ricky.tan.xin@gmail.com",
+    "url" : "http://rickytan.cn"
   },
-  "directories": {
-    "test": "test"
+  "license" : {
+    "type" : "mit"
   },
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/rickytan/json-validator.git"
+  "dependencies" : {
+    "debug" : "^2.2.0",
+    "underscore" : "^1.8.3"
   },
-  "bugs": {
-    "url": "https://github.com/rickytan/json-validator/issues"
+  "directories" : {
+    "test" : "test"
   },
-  "homepage": "https://github.com/rickytan/json-validator"
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/rickytan/json-validator.git"
+  },
+  "bugs" : {
+    "url" : "https://github.com/rickytan/json-validator/issues"
+  },
+  "homepage" : "https://github.com/rickytan/json-validator"
 }
