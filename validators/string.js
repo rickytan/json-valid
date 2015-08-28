@@ -10,7 +10,7 @@ function validator(param) {
         if (_.isString(param) && !_.isEmpty(match)) {
             this.pattern = new RegExp(".{" + match[1] + "," + match[2] + "}", 'g');
         } else {
-            this.pattern = new RegExp(param);
+            this.pattern = new RegExp(param, 'g');
         }
     }
     debug(this);
