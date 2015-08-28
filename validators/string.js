@@ -8,7 +8,7 @@ function validator(param) {
         var reg = /(\d+),(\d+)/g;
         var match = reg.exec(param);
         if (_.isString(param) && !_.isEmpty(match)) {
-            this.pattern = new RegExp(".{" + match[1] + "," + match[2] + "}", 'g');
+            this.pattern = new RegExp("^.{" + match[1] + "," + match[2] + "}$", 'g');
         } else {
             this.pattern = new RegExp(param, 'g');
         }
