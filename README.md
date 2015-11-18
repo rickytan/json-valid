@@ -2,7 +2,7 @@
 
 This is a simple to use json data model validate kit for NodeJS.
 
-In every NodeJS App, we have to receive data from Clients, with is represented in `JSON` format. Unlike a `Relational Database`, `JSON` doesn't have a schema, and the data from client can be arbitrary, so we have to validate use input on the server.
+In every NodeJS App, we have to receive data from Clients, which is represented in `JSON` format. Unlike a `Relational Database`, `JSON` doesn't have a schema, and the data from client can be arbitrary, so we have to validate use input on the server.
 
 There are some alternatives to this kind of scenario:
 
