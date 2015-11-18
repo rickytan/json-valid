@@ -72,14 +72,15 @@ console.log(valid1.validate(data2));
 
 
 var data3 = {
-    post_id: 'abcd',
+    post_id: 'abc',
     created_at: '2015-08-27T16:10:00.000Z',
     updated_at: 'wefaw',
     author: {
         user: 'Ricky',
         avatar: 'http://www.google.com/doodle.png'
     },
-    comments: []
+    comments: [],
+    action: '{\"test\":20}'
 };
 
 var model2 = {
@@ -91,12 +92,17 @@ var model2 = {
         avatar: 'url',
         age: 'number?'
     },
-    comments: 'array'
+    comments: 'array',
+    action: 'json'
 };
 
 var valid2 = new Validator(model2);
 
 console.log(valid2.validate(data3));
+
+Validator.define('Post', model2);
+
+console.log(new Validator('Post').validate(data3));
 
 /*
 Validator.define('User', {
